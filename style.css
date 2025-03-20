@@ -1,0 +1,104 @@
+/* Asegurar que toda la pantalla sea negra */
+html, body {
+  background-color: #000 !important;  /* Fondo negro total */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Evitar barras de desplazamiento */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Terminal */
+.terminal {
+  width: 800px;
+  border: 1px solid #555;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(120, 120, 120, 0.2);
+  height: 500px;
+  overflow-y: auto;
+  background-color: #000; /* Asegurar fondo negro */
+  color: #d0d0d0;
+  font-family: 'Courier New', monospace;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 1px dashed #555;
+  padding-bottom: 10px;
+}
+
+.ascii-art {
+  font-size: 10px;
+  line-height: 1.2;
+  white-space: pre;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #aaa;
+  font-family: monospace;
+}
+
+.menu-item {
+  margin: 10px 0;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.menu-item:hover {
+  background-color: #222;
+  color: #fff;
+}
+
+.prompt {
+  display: flex;
+  margin-top: 20px;
+}
+
+.prompt-symbol {
+  margin-right: 10px;
+  color: #888;
+}
+
+#input {
+  background: transparent;
+  border: none;
+  color: #d0d0d0;
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  flex-grow: 1;
+  outline: none;
+}
+
+.blink {
+  animation: blink 1s step-end infinite;
+  color: #bbb;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.status-bar {
+  margin-top: 20px;
+  font-size: 14px;
+  border-top: 1px dashed #555;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  color: #777;
+}
+
+h1 {
+  color: #ccc;
+}
+
+.response {
+  color: #b0b0b0;
+}
+
+.highlight {
+  color: #fff;
+}
